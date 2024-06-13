@@ -11,7 +11,6 @@ CORS(app, origins="0.0.0.0")
 app.register_blueprint(app_views)
 
 
-
 @app.errorhandler(404)
 def not_found(error):
     """
@@ -29,6 +28,7 @@ def not_found(error):
 
     return response
 
+
 @app.teardown_appcontext
 def teardown_db(self):
     """closes the storage on teardown"""
@@ -36,5 +36,5 @@ def teardown_db(self):
 
 
 if __name__ == "__main__":
-     app.run(host=getenv("HBNB_API_HOST", "0.0.0.0"),
+    app.run(host=getenv("HBNB_API_HOST", "0.0.0.0"),
             port=int(getenv("HBNB_API_PORT", "5000")), threaded=True)
