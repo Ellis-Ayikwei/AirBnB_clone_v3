@@ -9,9 +9,9 @@ from models.amenity import Amenity
 
 """import flask views"""
 from api.v1.views.index import *
-from api.v1.views.State import *
-from api.v1.views.City import *
-from api.v1.views.Amenity import *
-from api.v1.views.User import *
+from api.v1.views.states import *
+from api.v1.views.cities import *
+from api.v1.views.amenities import *
+from api.v1.views.users import *
 
 
