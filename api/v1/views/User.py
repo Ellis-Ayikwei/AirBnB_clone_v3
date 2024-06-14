@@ -4,13 +4,13 @@ from api.v1.views import app_views
 from models.user import User
 
 
-
 @app_views.route('/users', methods=['GET'],
                  strict_slashes=False)
 def users():
     """function to show the ameities with the user route"""
     users = storage.all('User')
     return jsonify([user.to_dict() for user in users.values()])
+
 
 @app_views.route('/users/<user_id>', methods=['GET'],
                  strict_slashes=False)

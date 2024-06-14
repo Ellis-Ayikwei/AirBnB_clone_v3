@@ -4,13 +4,13 @@ from api.v1.views import app_views
 from models.amenity import Amenity
 
 
-
 @app_views.route('/amenities', methods=['GET'],
                  strict_slashes=False)
 def amenities():
     """function to show the ameities with the amenity route"""
     amenities = storage.all('Amenity')
     return jsonify([amenity.to_dict() for amenity in amenities.values()])
+
 
 @app_views.route('/amenities/<amenity_id>', methods=['GET'],
                  strict_slashes=False)
@@ -46,7 +46,8 @@ def create_amenity():
     return jsonify(amenity.to_dict()), 201
 
 
-@app_views.route('/amenities/<amenity_id>', methods=['PUT'], strict_slashes=False)
+@app_views.route('/amenities/<amenity_id>', methods=['PUT'],
+                 strict_slashes=False)
 def update_amenity(amenity_id):
     """update an amenity"""
     amenity = storage.get(Amenity, amenity_id)
