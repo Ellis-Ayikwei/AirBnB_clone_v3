@@ -150,13 +150,21 @@ EOF  all  create  destroy  help  quit  show  update
 (hbnb) quit
 ```
 
+##Api - contains the rest apis for the storage database
+[v1](api/v1)
+API Folder Structure:
+### endpoints/
+* `/users` - get the users
+* `/states` - get the states
+* `/cities` - get the cities
+
 ## Bugs
 No known bugs at this time. 
 
 ## Authors
 Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)
-Ellis Ayikwei -  [Github](https://github.com/Ellis-Ayikwei)
+Ellis Ayikwei -  [Github](https://github.com/Ellis-Ayikwei) /[Twitter](https://x.com/Ellis_Rkf)
 
 Second part of Airbnb: Joann Vuong
 ## License
