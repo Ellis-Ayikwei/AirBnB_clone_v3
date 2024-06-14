@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+api to show the status and the not found 
+"""
 from api.v1.views import app_views
 from flask import jsonify
 from models import storage
