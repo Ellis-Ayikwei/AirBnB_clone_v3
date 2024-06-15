@@ -83,3 +83,4 @@ def update_place(place_id):
     place.latitude = req_data['latitude']
     place.longitude = req_data['longitude']
     place.save()
+    return jsonify(place.to_dict()), 200
