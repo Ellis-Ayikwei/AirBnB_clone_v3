@@ -15,7 +15,8 @@ def places():
     return jsonify([place.to_dict() for place in places.values()])
 
 
-@app_views.route('/cities/<city_id>/places', methods=['GET'], strict_slashes=False)
+@app_views.route('/cities/<city_id>/places', methods=['GET'],
+                 strict_slashes=False)
 def place(city_id):
     """function to show the city with the city_id  route"""
     city = storage.get(City, city_id)
