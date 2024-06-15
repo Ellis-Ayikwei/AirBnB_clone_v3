@@ -74,7 +74,8 @@ class FileStorage:
             retrieves one object based on class name and id
         """
         if cls and id:
-            fetch_obj = "{}.{}".format(cls.__name__, id)
+            fetch_obj = f"{cls.__name__}.{id}"
+            print(fetch_obj)
             all_obj = self.all(cls)
             return all_obj.get(fetch_obj)
         return None
